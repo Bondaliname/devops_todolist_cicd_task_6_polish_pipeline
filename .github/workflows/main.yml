@@ -20,7 +20,7 @@ on:
           - 'windows-latest-3.8'
           - 'windows-latest-3.9'
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 env:
@@ -29,6 +29,7 @@ env:
 
 jobs:
   python-ci:
+    name: Python CI
     strategy:
       matrix:
         PythonVersion: [ 3.8, 3.9 ]
