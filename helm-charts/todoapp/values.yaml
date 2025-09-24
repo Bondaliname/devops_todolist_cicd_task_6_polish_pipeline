@@ -19,11 +19,11 @@ todoapp:
       cpu: "150m"
 
   secrets:
-    SECRET_KEY: placeholder
-    DB_NAME: placeholder
-    DB_USER: placeholder
-    DB_PASSWORD: placeholder
-    DB_HOST: placeholder
+    SECRET_KEY: "<REPLACE_WITH_SECRET>"
+    DB_NAME: "<REPLACE_WITH_SECRET>"
+    DB_USER: "<REPLACE_WITH_SECRET>"
+    DB_PASSWORD: "<REPLACE_WITH_SECRET>"
+    DB_HOST: "<REPLACE_WITH_SECRET>"
 
   hpa:
     minReplicas: 2
